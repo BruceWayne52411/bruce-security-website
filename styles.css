@@ -291,18 +291,18 @@ section {
   color: #9ee6c1
 }
 
-.done {
-  color: green;
-}
-
-.incomplete {
-  color: #f39c12;
-}
-
 .cta-row {
   display: flex;
   gap: 10px;
   flex-wrap: wrap
+}
+
+.done {
+  color: green
+}
+
+.incomplete {
+  color: yellow
 }
 
 footer {
@@ -337,5 +337,123 @@ footer {
   a {
     color: #000;
     text-decoration: underline
+  }
+}
+
+/* --- Sticky action bar (fixed on mobile) --- */
+@media (max-width: 768px) {
+  .sticky-cta {
+    position: fixed;
+    left: 12px;
+    right: 12px;
+    bottom: calc(12px + env(safe-area-inset-bottom));
+    z-index: 100;
+    background: rgba(18, 23, 34, .95);
+    backdrop-filter: blur(6px);
+    border: 1px solid #1a2232;
+    border-radius: 14px;
+    padding: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .45);
+    animation: pop 160ms ease-out;
+  }
+
+  @keyframes pop {
+    from {
+      transform: translateY(8px);
+      opacity: .0;
+    }
+
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .sticky-cta .row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  /* make room so it doesn't cover footer */
+  body {
+    padding-bottom: 96px;
+  }
+}
+
+/* --- Mobile polish (portrait) --- */
+@media (max-width: 480px) {
+  header.hero {
+    padding: 20px 16px;
+    border-radius: 14px;
+  }
+
+  .name h1 {
+    font-size: 24px;
+  }
+
+  .role {
+    font-size: 14px;
+  }
+
+  .wrap {
+    padding: 16px;
+  }
+
+  .chip {
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+
+  .card {
+    padding: 16px;
+    border-radius: 14px;
+  }
+
+  .btn,
+  .btn.secondary {
+    width: 100%;
+    justify-content: center;
+    padding: 14px 16px;
+  }
+
+  .kpi {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .kpi .num {
+    font-size: 18px;
+  }
+
+  .day {
+    padding: 8px;
+  }
+
+  .day .when {
+    font-size: 11px;
+  }
+
+  .hero::after {
+    display: none;
+  }
+}
+
+/* horizontal scroll for day pills on small screens */
+@media (max-width: 480px) {
+  .availability {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    overflow-x: auto;
+    padding-bottom: 6px;
+    gap: 8px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .availability .day {
+    scroll-snap-align: start;
+    min-width: 88px;
   }
 }
