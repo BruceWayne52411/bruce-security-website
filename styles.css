@@ -457,3 +457,53 @@ footer {
     min-width: 88px;
   }
 }
+
+/* Accordion dropdowns */
+.accordion {
+  background: var(--panel-2);
+  border: 1px solid #1a2232;
+  border-radius: 14px;
+  padding: 0;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+
+.accordion>summary {
+  list-style: none;
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 6px;
+  padding: 14px 16px;
+  font-weight: 700;
+  align-items: center;
+}
+
+.accordion>summary::-webkit-details-marker {
+  display: none;
+}
+
+.accordion>summary small {
+  font-weight: 400;
+}
+
+.accordion>summary::after {
+  content: "▸";
+  font-weight: 800;
+  transform: rotate(0deg);
+  transition: transform .18s ease;
+  color: var(--muted);
+}
+
+.accordion[open]>summary::after {
+  transform: rotate(90deg);
+  color: var(--accent);
+}
+
+.accordion>*:not(summary) {
+  padding: 0 16px 14px 16px;
+}
+
+.accordion ul {
+  margin: 10px 0 0 18px;
+}
