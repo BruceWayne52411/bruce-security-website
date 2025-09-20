@@ -470,7 +470,7 @@ footer {
 
 .accordion>summary {
   list-style: none;
-  cursor: pointer;
+  cursor: pointer red;
   display: grid;
   grid-template-columns: 1fr auto;
   gap: 6px;
@@ -481,7 +481,6 @@ footer {
 
 .accordion>summary::-webkit-details-marker {
   display: none;
-  color: red;
 }
 
 .accordion>summary small {
