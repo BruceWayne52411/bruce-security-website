@@ -516,6 +516,13 @@ footer {
   margin: 10px 0 0 18px;
 }
 
+.pet-card img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+}
+
+
 /* --- Pets Carousel --- */
 .pet-carousel {
   position: relative;
