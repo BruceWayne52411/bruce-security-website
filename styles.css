@@ -20,14 +20,22 @@
 
 html,
 body {
-  height: 100%
+  height: 100%;
+  margin: 0;
+  color: var(--text);
+  background-color: var(--bg);
+  /* single, solid base */
 }
 
 body {
-  margin: 0;
   font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans";
-  color: var(--text);
-  background: radial-gradient(1200px 700px at 20% -10%, #132032 0%, transparent 60%), linear-gradient(180deg, #0b0e12 0%, #0b0e12 100%);
+  /* put the decoration only in background-image, not full 'background' */
+  background-image: radial-gradient(1200px 700px at 20% -10%, #132032 0%, transparent 60%);
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  /* or 'fixed' if you want it to stay put */
+  background-color: var(--bg);
+  /* explicit base again for safety */
 }
 
 a {
