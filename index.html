@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Bruce Henson — Security Officer Portfolio</title>
+  <title>Bruce Henson — Current Job: Professional Guard</title>
   <meta name="description"
     content="Security officer portfolio for private/contract security roles. Skills, certifications, experience, availability, and contact." />
   <meta name="theme-color" content="#0b0e12" />
@@ -21,7 +21,7 @@
       <div class="topbar">
         <div class="name">
           <h1>Bruce Henson</h1>
-          <div class="role">Security Officer • Site Patrol • Guest Services • Trainer</div>
+          <div class="role">Professional Guard • Site Patrol • Guest Services • Trainer</div>
           <div class="subtle" style="margin-top:6px">Salt Lake City, UT · Open to: Overnight | Patrol | Corporate |
             Hospital | Armed</div>
         </div>
@@ -44,7 +44,7 @@
     <section class="grid cols-3" aria-label="Highlights">
       <article class="card">
         <h3>Professional Summary</h3>
-        <p>Calm, observant Security Officer with experience across mixed-use properties (retail, hotel/hostel,
+        <p>Calm, observant professional guard with experience across mixed-use properties (retail, hotel/hostel,
           recreation). Strong on guest and/or client interaction, report writing, patrol routines, and de-escalation.
           Training new
           security officers, DAR documentation, and incident reporting. Actively preparing
@@ -95,7 +95,7 @@
           </div>
           <div class="box">
             <div class="num">Trained</div>
-            <div class="subtle">15+ new security officers</div>
+            <div class="subtle">~17 new security officers at the Granary Campus Post</div>
           </div>
           <div class="box">
             <div class="num">DARs</div>
@@ -220,63 +220,82 @@
           <div class="when">Nights (18:00–06:00)</div>
         </div>
       </div>
+    </section>
 
-      <!-- Pets Carousel -->
-      <section id="pets" class="card" aria-label="Pets">
-        <div class="flex" style="justify-content:space-between; align-items:center; margin-bottom:8px">
-          <h3 style="margin:0">My Pets</h3>
-          <div class="subtle" aria-live="polite" id="pet-status"></div>
+    <!-- Pets Carousel -->
+    <section id="pets" class="card" aria-label="Pets">
+      <div class="flex" style="justify-content:space-between; align-items:center; margin-bottom:8px">
+        <h3 style="margin:0">My Pets</h3>
+        <div class="subtle" aria-live="polite" id="pet-status"></div>
+      </div>
+
+      <div class="pet-carousel" role="region" aria-roledescription="carousel" aria-label="Pet photos">
+        <button class="pet-nav prev" aria-label="Previous slide">‹</button>
+
+        <div class="pet-viewport">
+          <ul class="pet-track" role="listbox">
+            <!-- Slide 1 -->
+            <li class="pet-slide" role="option" aria-selected="true">
+              <figure class="pet-card">
+                <img src="pets/ferret-1.jpg" alt="My ferret lounging on a blanket">
+                <figcaption>
+                  <b>Lynk</b> — Ferret. Loves tunnels and stealing socks.
+                </figcaption>
+              </figure>
+            </li>
+            <!-- Slide 2 -->
+            <li class="pet-slide" role="option" aria-selected="true">
+              <figure class="pet-card">
+                <img src="pets/dog-1.jpg" alt="Maggy my Husky/Aussie mix Laying on the bed">
+                <figcaption>
+                  <b>Maggy</b> — Husky/Aussie mix. 1 year old service dog in training personally done.
+                </figcaption>
+              </figure>
+            </li>
+            <!-- Slide 3 -->
+            <li class="pet-slide" role="option" aria-selected="true">
+              <figure class="pet-card">
+                <img src="pets/bearded-dragon-1.jpg" alt="Hank the Bearded Dragon on his favorite rock">
+                <figcaption>
+                  <b>Hank</b> — Bearded Dragon. Chillest reptile ever.
+                </figcaption>
+              </figure>
+            </li>
+          </ul>
         </div>
 
-        <div class="pet-carousel" role="region" aria-roledescription="carousel" aria-label="Pet photos">
-          <button class="pet-nav prev" aria-label="Previous slide">‹</button>
+        <button class="pet-nav next" aria-label="Next slide">›</button>
 
-          <div class="pet-viewport">
-            <ul class="pet-track" role="listbox">
-              <!-- Slide 1 -->
-              <li class="pet-slide" role="option" aria-label="1 of 3" aria-selected="true">
-                <figure class="pet-card">
-                  <img src="pets/ferret-1.jpg" alt="My ferret lounging on a blanket">
-                  <figcaption>
-                    <b>Lynk</b> — Ferret. Loves tunnels and stealing socks.
-                  </figcaption>
-                </figure>
-              </li>
-              <!-- Slide 2 -->
-              <li class="pet-slide" role="option" aria-label="2 of 3" aria-selected="false">
-                <figure class="pet-card">
-                  <img src="pets/dog-1.jpg" alt="Maggy my Husky/Aussie mix Laying on the bed">
-                  <figcaption>
-                    <b>Maggy</b> — Husky/Aussie mix. 1 year old service dog in training personally done.
-                  </figcaption>
-                </figure>
-              </li>
-              <!-- Slide 3 -->
-              <li class="pet-slide" role="option" aria-label="3 of 3" aria-selected="false">
-                <figure class="pet-card">
-                  <img src="pets/bearded-dragon-1.jpg" alt="Hank the Bearded Dragon on his favorite rock">
-                  <figcaption>
-                    <b>Hank</b> — Bearded Dragon. Chillest reptile ever.
-                  </figcaption>
-                </figure>
-              </li>
-            </ul>
-          </div>
-
-          <button class="pet-nav next" aria-label="Next slide">›</button>
-
-          <div class="pet-dots" role="tablist" aria-label="Select slide">
-            <!-- Dots are generated by JS based on slide count -->
-          </div>
-        </div>
-      </section>
-
-      <!-- Sticky bottom contact bar -->
-      <div class="sticky-cta" aria-label="Quick contact bar">
-        <div class="row">
-          <a class="btn" href="mailto:henson.bruce01@gmail.com?subject=Security%20Role%20Inquiry">Email Me</a>
+        <div class="pet-dots" role="tablist" aria-label="Select slide">
+          <!-- Dots are generated by JS based on slide count -->
         </div>
       </div>
+    </section>
+
+    <section id="hobbies" class="card full">
+      <h2>Hobbies & Interests</h2>
+      <ul>
+        <li><b>Outdoor activities</b> — hiking, camping, and exploring nature</li>
+        <li><b>PC building & tech</b> — custom gaming rigs and system optimization</li>
+        <li><b>Tabletop gaming</b> — Dungeons & Dragons, Warhammer 40k</li>
+        <li><b>Video games</b> — RPGs, strategy, and indie games</li>
+        <li><b>Reading</b> — fantasy, sci-fi, and non-fiction</li>
+        <li><b>Cooking & baking</b> — experimenting with new recipes and cuisines</li>
+        <li><b>Music</b> — love discovering new artists and genres however ACDC, Bon Jovi, and Guns N Roses always hold
+          a special place
+          in my heart</li>
+        <li><b>Fitness</b> — training for law enforcement standards and personal health
+        </li>
+      </ul>
+    </section>
+
+
+    <!-- Sticky bottom contact bar -->
+    <div class="sticky-cta" aria-label="Quick contact bar">
+      <div class="row">
+        <a class="btn" href="mailto:henson.bruce01@gmail.com?subject=Security%20Role%20Inquiry">Email Me</a>
+      </div>
+    </div>
     </section>
 
     <footer>
@@ -346,7 +365,12 @@
         dots.forEach((d, i) => d.setAttribute('aria-selected', i === index ? 'true' : 'false'));
 
         // status text
-        if (status) status.textContent = `Showing ${index + 1}–${Math.min(index + cols, slides.length)} of ${slides.length}`;
+        if (window.innerWidth <= 768) {
+          slide.setAttribute("aria-selected", `${i + 1} of ${slides.length}`);
+        } else {
+          slide.removeAttribute("aria-selected");
+        }
+
 
         // disable buttons at ends
         prevBtn.disabled = index === 0;
